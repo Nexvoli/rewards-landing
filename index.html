@@ -1,452 +1,238 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claim Your Verified U.S. Gift Card Rewards Instantly! | Exclusive Rewards</title>
-  <meta name="description" content="Get instant access to verified U.S. gift card rewards. Amazon $750, Walmart $100, Cash bonuses & more. 100% legit reward programs with instant confirmation.">
-  <link rel="canonical" href="https://example.com/us-gift-card-rewards">
-  <meta property="og:title" content="Claim Your Verified U.S. Gift Card Rewards Instantly!">
-  <meta property="og:description" content="Get instant access to verified U.S. gift card rewards. Amazon $750, Walmart $100, Cash bonuses & more. 100% legit reward programs.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/us-gift-card-rewards">
-  <meta property="og:image" content="https://example.com/og-rewards-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Claim Your Verified U.S. Gift Card Rewards Instantly!">
-  <meta name="twitter:description" content="Get instant access to verified U.S. gift card rewards. Amazon $750, Walmart $100, Cash bonuses & more.">
-  <meta name="twitter:image" content="https://example.com/twitter-rewards-image.jpg">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
- <style>
-  body { font-family: 'Inter', sans-serif; }
-  .glow-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-  .glow-red { box-shadow: 0 0 20px rgba(239, 68, 68, 0.5); }
-  .glow-gold { box-shadow: 0 0 20px rgba(253, 224, 71, 0.5); }
-  .glassmorphism { backdrop-filter: blur(16px); background: rgba(255, 255, 255, 0.1); }
-  .animate-float { animation: float 3s ease-in-out infinite; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashbox - CA's #1 Online Game</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            color: #ffffff; 
+            overflow-x: hidden; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh;
+            background: #09090e;
+            padding: 15px;
+        }
+        
+        /* Dynamic Gaming Background */
+        .animated-bg {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2;
+            background: linear-gradient(-45deg, #1f0b3b, #4a0e4e, #0a3d2c, #10204b);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            opacity: 0.9;
+        }
+        @keyframes gradientBG { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
-  @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
+        /* Floating Money/Game Orbs */
+        .orb { position: fixed; border-radius: 50%; filter: blur(70px); z-index: -1; opacity: 0.5; animation: float 8s infinite ease-in-out alternate; }
+        .orb-1 { width: 250px; height: 250px; background: #00ff88; top: 10%; left: -50px; }
+        .orb-2 { width: 300px; height: 300px; background: #ff007f; bottom: 10%; right: -50px; animation-delay: -4s; }
+        @keyframes float { 0% { transform: translateY(0) scale(1); } 100% { transform: translateY(-40px) scale(1.1); } }
 
-  .animate-bounce-hover:hover { animation: bounce 0.5s; }
+        /* Main Glass Container */
+        .glass-card {
+            background: rgba(20, 20, 30, 0.6);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 40px 30px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            animation: popIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes popIn { 0% { opacity: 0; transform: scale(0.95) translateY(20px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
 
-  /* 📱 MOBILE FIX */
-  @media (max-width: 480px) {
-    .header-text {
-      font-size: 12px !important;
-    }
-    .header-btn {
-      font-size: 12px !important;
-      padding: 4px 10px !important;
-    }
-  }
-</style>
+        /* Top Badges */
+        .top-badges { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+        .badge-rating { background: rgba(0,0,0,0.4); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; border: 1px solid rgba(255,215,0,0.3); }
+        .badge-rating span { color: #ffdf00; letter-spacing: 1px; }
+        .live-viewers { background: rgba(0, 255, 136, 0.15); border: 1px solid rgba(0, 255, 136, 0.4); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 8px; color: #e0ffe0; }
+        .pulse-dot { width: 8px; height: 8px; background: #00ff88; border-radius: 50%; box-shadow: 0 0 10px #00ff88; animation: blink 1s infinite; }
+        @keyframes blink { 50% { opacity: 0.3; } }
 
+        /* Typography */
+        .brand { font-size: 1rem; color: #00ff88; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        h1 { font-size: 2.4rem; font-weight: 900; line-height: 1.2; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+        h1 span { background: linear-gradient(to right, #00ff88, #00b8ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Features Box */
+        .features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 25px; }
+        .feature-item { font-size: 1rem; font-weight: 600; color: #e2e8f0; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .feature-item svg { width: 20px; height: 20px; fill: #00ff88; }
+
+        /* Offer Details Highlight */
+        .offer-highlight { background: linear-gradient(90deg, rgba(255, 0, 127, 0.1), rgba(0, 255, 136, 0.1)); border: 1px solid rgba(255,255,255,0.15); padding: 15px; border-radius: 12px; margin-bottom: 25px; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px; }
+        .offer-stat { text-align: center; }
+        .offer-stat span { display: block; font-size: 0.8rem; color: #a0aec0; text-transform: uppercase; letter-spacing: 1px; }
+        .offer-stat strong { font-size: 1.4rem; color: #fff; font-weight: 800; }
+
+        /* Redirect & CTA */
+        .redirect-wrapper { background: rgba(0, 0, 0, 0.3); border-radius: 16px; padding: 25px 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .status-text { font-size: 1.1rem; font-weight: 600; margin-bottom: 15px; color: #fff; }
+        #timer-wrap { font-size: 1.5rem; font-weight: 800; color: #00ff88; margin-bottom: 15px; }
+        
+        .progress-wrap { width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 8px; overflow: hidden; margin-bottom: 20px; }
+        .progress-bar { height: 100%; width: 0%; background: linear-gradient(90deg, #00b8ff, #00ff88); animation: loadBar 5s linear forwards; }
+        @keyframes loadBar { 100% { width: 100%; } }
+
+        .btn { display: inline-block; width: 100%; background: linear-gradient(90deg, #00ff88, #00b8ff); color: #000; font-weight: 900; padding: 18px 20px; border-radius: 50px; text-decoration: none; font-size: 1.1rem; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 10px 20px rgba(0, 255, 136, 0.3); border: none; cursor: pointer; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(0, 255, 136, 0.5); filter: brightness(1.1); }
+
+        /* Mobile Adjustments */
+        @media (max-width: 480px) { 
+            .glass-card { padding: 30px 20px; border-radius: 20px; }
+            h1 { font-size: 1.9rem; }
+            .top-badges { justify-content: center; }
+            .offer-highlight { flex-direction: column; gap: 15px; }
+        }
+
+        /* Toasts */
+        .toast { position: fixed; bottom: -100px; left: 50%; transform: translateX(-50%); background: rgba(10, 15, 25, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(0, 255, 136, 0.3); padding: 12px 20px; border-radius: 50px; display: flex; align-items: center; gap: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: bottom 0.5s ease; z-index: 100; width: max-content; max-width: 90vw; }
+        .toast.show { bottom: 20px; }
+        .toast-icon { background: rgba(0, 255, 136, 0.2); width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #00ff88; font-weight: bold; font-size: 1rem; }
+        .toast-text { font-size: 0.85rem; color: #cbd5e1; }
+        .toast-text span { color: #fff; font-weight: bold; }
+    </style>
 </head>
-<body class="bg-gradient-to-br from-blue-900 via-red-800 to-blue-900 text-white">
-  <header class="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
-    <div class="container mx-auto px-4 py-4">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center space-x-2">
-           <div class="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
-            <img src="assets/images/logo.png" alt="logo" class="w-full h-full object-cover">
-          </div>
-          <span class="text-xl font-bold text-white header-text">Rewards.nexvoli.com</span>
-        </div>
-        <nav class="hidden md:flex items-center space-x-8">
-          <a href="#offers" class="text-white/80 hover:text-white transition-colors">Offers</a>
-          <a href="#how-it-works" class="text-white/80 hover:text-white transition-colors">How It Works</a>
-          <a href="#trust" class="text-white/80 hover:text-white transition-colors">Trust & Security</a>
-          <a href="#support" class="text-white/80 hover:text-white transition-colors">Support</a>
-        </nav>
-        <a href="https://www.af9m8trk.com/S8711B15/TJ2123FW/?s1=misa"
-        class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-2 rounded-full font-semibold hover:from-yellow-500 header-btn">
-               Get Started
-         </a>
-      </div>
-    </div>
-  </header>
+<body>
 
-  <main class="pt-20">
-    <section class="relative min-h-screen bg-gradient-to-br from-blue-600 via-red-500 to-yellow-400 overflow-hidden flex items-center justify-center px-4 py-20">
-  <!-- Animated Background Elements -->
-  <div class="absolute inset-0 opacity-20">
-    <div class="absolute top-20 left-10 w-8 h-8 bg-yellow-300 rounded-full animate-bounce" style="animation-delay: 0s;"></div>
-    <div class="absolute top-40 right-20 w-6 h-6 bg-blue-300 rounded-full animate-bounce" style="animation-delay: 0.5s;"></div>
-    <div class="absolute bottom-32 left-1/4 w-10 h-10 bg-red-300 rounded-full animate-bounce" style="animation-delay: 1s;"></div>
-    <div class="absolute top-1/3 right-1/3 w-4 h-4 bg-yellow-200 rounded-full animate-bounce" style="animation-delay: 1.5s;"></div>
-  </div>
-  
-  <!-- Main Content -->
-  <div class="relative z-10 max-w-6xl mx-auto text-center">
-    <div class="mb-8">
-      <h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight">
-        Claim Your Verified <span class="text-yellow-300">U.S. Gift Card</span> Rewards Instantly!
-      </h1>
-      <p class="text-xl md:text-2xl text-blue-100 font-semibold mb-8 max-w-3xl mx-auto">
-        Instant confirmation. 100% Legit U.S. Reward Programs.
-      </p>
-    </div>
-    
-    <!-- Floating Gift Cards -->
-    <div class="relative mb-12">
-      <img
-        data-ai="generate"
-        data-slot="hero-gift-cards"
-        data-prompt="Multiple colorful gift cards floating in 3D space with glowing effects, Amazon, Walmart, and cash cards with sparkles and shine effects"
-        data-ar="16:9"
-        src="assets/images/hero.png"
-        alt="Floating gift cards with glowing effects"
-        width="800"
-        height="450"
-        class="w-full max-w-2xl mx-auto rounded-3xl shadow-2xl animate-pulse"
-        loading="eager"
-        decoding="async"
-        fetchpriority="high"
-      />
-    </div>
-    
-    <!-- CTA Button -->
-    <div class="mb-12">
-      <a href="https://www.af9m8trk.com/S8711B15/UXF123DZ/?s3=loos" class="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-black text-xl md:text-2xl px-12 py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse hover:animate-none">
-        Get My Reward Now
-      </a>
-    </div>
-    
-    <!-- Trust Badges -->
-    <div class="flex flex-wrap justify-center items-center gap-8 text-white">
-      <div class="flex items-center gap-3 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3">
-        <div class="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center">
-          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-          </svg>
-        </div>
-        <span class="font-bold">Secure</span>
-      </div>
-      <div class="flex items-center gap-3 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3">
-        <div class="w-6 h-6 bg-blue-400 rounded-full flex items-center justify-center">
-          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-          </svg>
-        </div>
-        <span class="font-bold">Verified</span>
-      </div>
-      <div class="flex items-center gap-3 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3">
-        <div class="w-6 h-6 bg-red-400 rounded-full flex items-center justify-center">
-          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path>
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path>
-          </svg>
-        </div>
-        <span class="font-bold">No Hidden Fees</span>
-      </div>
-    </div>
-  </div>
-</section>
-    
-    <section class="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-  <!-- Background Effects -->
-  <div class="absolute inset-0 opacity-10">
-    <div class="absolute top-10 left-10 w-32 h-32 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-20 right-20 w-40 h-40 bg-red-500 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
-    <div class="absolute top-1/2 left-1/2 w-36 h-36 bg-yellow-500 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
-  </div>
-  
-  <div class="max-w-7xl mx-auto px-4 relative z-10">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-6xl font-black text-white mb-6">
-        <span class="text-yellow-400">Exclusive</span> Reward Offers
-      </h2>
-      <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-        Choose from our premium verified U.S. reward programs
-      </p>
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- Amazon Offer -->
-      <div class="group relative">
-        <div class="absolute inset-0 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
-        <div class="relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:border-yellow-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:-translate-y-2">
-          <img
-            data-ai="generate"
-            data-slot="offer-amazon"
-            data-prompt="Amazon gift card with $750 bonus text, glowing orange and yellow effects, premium 3D design with sparkles"
-            data-ar="1:1"
-            src="assets/images/amazon.png"
-            alt="Amazon $750 Bonus Gift Card"
-            width="300"
-            height="300"
-            class="w-full h-48 object-cover rounded-2xl mb-6 shadow-2xl"
-            loading="lazy"
-            decoding="async"
-            fetchpriority="auto"
-          />
-          <h3 class="text-2xl font-black text-white mb-2">Amazon Bonus</h3>
-          <p class="text-4xl font-black text-yellow-400 mb-4">$750</p>
-          <a href="https://www.af9m8trk.com/S8711B15/9PC123FX/" class="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 block text-center">
-            Claim Offer
-          </a>
-        </div>
-      </div>
-      
-      <!-- Walmart Offer -->
-      <div class="group relative">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-300 animate-pulse" style="animation-delay: 0.5s;"></div>
-        <div class="relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:-translate-y-2">
-          <img
-            data-ai="generate"
-            data-slot="offer-walmart"
-            data-prompt="Walmart gift card with $100 reward text, glowing blue effects, premium 3D design with sparkles"
-            data-ar="1:1"
-            src="assets/images/walmart.png"
-            alt="Walmart $100 Reward Gift Card"
-            width="300"
-            height="300"
-            class="w-full h-48 object-cover rounded-2xl mb-6 shadow-2xl"
-            loading="lazy"
-            decoding="async"
-            fetchpriority="auto"
-          />
-          <h3 class="text-2xl font-black text-white mb-2">Walmart Reward</h3>
-          <p class="text-4xl font-black text-blue-400 mb-4">$100</p>
-          <a href="https://www.af9m8trk.com/S8711B15/3A9122KV/?s1=ak" class="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 block text-center">
-            Claim Offer
-          </a>
-        </div>
-      </div>
-      
-      <!-- Cash Offer -->
-      <div class="group relative">
-        <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-300 animate-pulse" style="animation-delay: 1s;"></div>
-        <div class="relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:-translate-y-2">
-          <img
-            data-ai="generate"
-            data-slot="offer-cash"
-            data-prompt="Cash reward card showing $750 + $250 bonus, glowing green money effects, premium 3D design with dollar signs and sparkles"
-            data-ar="1:1"
-            src="assets/images/cash750.png"
-            alt="Cash $750 + $250 Bonus Reward"
-            width="300"
-            height="300"
-            class="w-full h-48 object-cover rounded-2xl mb-6 shadow-2xl"
-            loading="lazy"
-            decoding="async"
-            fetchpriority="auto"
-          />
-          <h3 class="text-2xl font-black text-white mb-2">Cash Bonus</h3>
-          <p class="text-3xl font-black text-green-400 mb-4">$750 + $250</p>
-          <a href="https://www.af9m8trk.com/S8711B15/B3A126D5/" class="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 block text-center">
-            Claim Offer
-          </a>
-        </div>
-      </div>
-      
-      <!-- Skims Offer -->
-      <div class="group relative">
-        <div class="absolute inset-0 bg-gradient-to-r from-pink-400 to-rose-500 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-300 animate-pulse" style="animation-delay: 1.5s;"></div>
-        <div class="relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:border-pink-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:-translate-y-2">
-          <img
-            data-ai="generate"
-            data-slot="offer-skims"
-            data-prompt="Skims shopping reward card with $750 text, glowing pink and rose effects, premium 3D design with fashion elements and sparkles"
-            data-ar="1:1"
-            src="assets/images/skims.png"
-            alt="Skims $750 Shopping Reward"
-            width="300"
-            height="300"
-            class="w-full h-48 object-cover rounded-2xl mb-6 shadow-2xl"
-            loading="lazy"
-            decoding="async"
-            fetchpriority="auto"
-          />
-          <h3 class="text-2xl font-black text-white mb-2">Skims Reward</h3>
-          <p class="text-4xl font-black text-pink-400 mb-4">$750</p>
-          <a href="https://www.af9m8trk.com/S8711B15/9PC123FX/?s1=pallabi" class="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 block text-center">
-            Claim Offer
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-    
-    <section class="py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
-  <!-- Background Pattern -->
-  <div class="absolute inset-0 opacity-5">
-    <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 25% 25%, #3b82f6 0%, transparent 50%), radial-gradient(circle at 75% 75%, #ef4444 0%, transparent 50%); background-size: 100px 100px;"></div>
-  </div>
-  
-  <div class="max-w-6xl mx-auto px-4 relative z-10">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-6xl font-black text-white mb-6">
-        How It <span class="text-yellow-400">Works</span>
-      </h2>
-      <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-        Simple 3-step process to claim your verified U.S. rewards
-      </p>
-    </div>
-    
-    <div class="relative">
-      <!-- Connecting Line -->
-      <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-yellow-400 to-red-500 transform -translate-y-1/2 rounded-full opacity-50"></div>
-      
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
-        <!-- Step 1 -->
-        <div class="relative text-center group">
-          <div class="relative mb-8">
-            <div class="absolute inset-0 bg-blue-500 rounded-full blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-300 animate-pulse"></div>
-            <div class="relative w-32 h-32 mx-auto bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
-              <img
-                data-ai="generate"
-                data-slot="process-step1"
-                data-prompt="Clean icon representing selection or choosing, white icon on transparent background, simple and modern design"
-                data-ar="1:1"
-                src="assets/images/select.png"
-                alt="Step 1: Select your reward"
-                width="64"
-                height="64"
-                class="w-16 h-16 text-white"
-                loading="lazy"
-                decoding="async"
-                fetchpriority="auto"
-              />
-            </div>
-            <div class="absolute -top-8 -right-1 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center font-black text-black text-xl shadow-lg">
-              1
-            </div>
-          </div>
-          <h3 class="text-2xl font-black text-white mb-4">Select Your Reward</h3>
-          <p class="text-gray-300 text-lg leading-relaxed">
-            Choose from our exclusive verified U.S. reward programs including Amazon, Walmart, Cash, and premium brand offers.
-          </p>
-        </div>
+    <div class="animated-bg"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="glass-card">
         
-        <!-- Step 2 -->
-        <div class="relative text-center group">
-          <div class="relative mb-8">
-            <div class="absolute inset-0 bg-yellow-500 rounded-full blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-300 animate-pulse" style="animation-delay: 0.5s;"></div>
-            <div class="relative w-32 h-32 mx-auto bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
-              <img
-                data-ai="generate"
-                data-slot="process-step2"
-                data-prompt="Clean icon representing verification or form completion, white icon on transparent background, simple and modern design"
-                data-ar="1:1"
-                src="assets/images/completeverification.png"
-                alt="Step 2: Complete verification"
-                width="64"
-                height="64"
-                class="w-16 h-16 text-white"
-                loading="lazy"
-                decoding="async"
-                fetchpriority="auto"
-              />
-            </div>
-            <div class="absolute -top-8 -right-1 w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center font-black text-white text-xl shadow-lg">
-              2
-            </div>
-          </div>
-          <h3 class="text-2xl font-black text-white mb-4">Complete Verification</h3>
-          <p class="text-gray-300 text-lg leading-relaxed">
-            Quick and secure verification process to confirm your eligibility for U.S. reward programs. 100% safe and encrypted.
-          </p>
+        <div class="top-badges">
+            <div class="badge-rating"><span>★★★★★</span> 4.9/5 (CA)</div>
+            <div class="live-viewers"><div class="pulse-dot"></div> <span id="viewerCount">284</span> Playing Now</div>
         </div>
+
+        <span class="brand">🔥 Cashbox Exclusive</span>
+        <h1>Canada's #1<br><span>Online Game</span></h1>
         
-        <!-- Step 3 -->
-        <div class="relative text-center group">
-          <div class="relative mb-8">
-            <div class="absolute inset-0 bg-red-500 rounded-full blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-300 animate-pulse" style="animation-delay: 1s;"></div>
-            <div class="relative w-32 h-32 mx-auto bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
-              <img
-                data-ai="generate"
-                data-slot="process-step3"
-                data-prompt="Clean icon representing receiving or claiming rewards, white icon on transparent background, simple and modern design"
-                data-ar="1:1"
-                src="assets/images/claiminstantly.png"
-                alt="Step 3: Claim your reward instantly"
-                width="64"
-                height="64"
-                class="w-16 h-16 text-white"
-                loading="lazy"
-                decoding="async"
-                fetchpriority="auto"
-              />
+        <div class="features">
+            <div class="feature-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Play and Earn Real Rewards
             </div>
-            <div class="absolute -top-8 -right-1 w-12 h-12 bg-red-400 rounded-full flex items-center justify-center font-black text-white text-xl shadow-lg">
-              3
+            <div class="feature-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Instant Deposit & Withdrawal
             </div>
-          </div>
-          <h3 class="text-2xl font-black text-white mb-4">Claim Instantly</h3>
-          <p class="text-gray-300 text-lg leading-relaxed">
-            Receive your verified reward instantly with immediate confirmation. No waiting, no hidden fees, just instant rewards.
-          </p>
+            <div class="feature-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                100% Secure & Verified
+            </div>
         </div>
-      </div>
-    </div>
-    
-    <!-- CTA Section -->
-    <div class="text-center mt-16">
-      <a href="https://www.af9m8trk.com/S8711B15/MJP12296/?s1=akash" class="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-black text-xl px-12 py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300">
-        Start My Claim Process
-      </a>
-    </div>
-  </div>
-</section>
-    
-    <section class="py-16 bg-gradient-to-br from-blue-50 via-white to-red-50 relative overflow-hidden"><div class="absolute inset-0 bg-gradient-to-r from-blue-100/20 via-transparent to-red-100/20"></div><div class="container mx-auto px-4 relative z-10"><div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Trusted by Thousands of U.S. Customers</h2><p class="text-lg text-gray-600 max-w-2xl mx-auto">Real U.S. customers, direct verified sources. Your security and satisfaction are our top priorities.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"><div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"><div class="text-center"><img data-ai="generate" data-slot="trust-ssl" data-prompt="SSL security certificate badge with shield icon and checkmark, professional blue and gold colors" data-ar="1:1" src="assets/images/ssl.png" alt="SSL Secured" alt="SSL Secure Badge" width="80" height="80" class="w-20 h-20 mx-auto mb-4 rounded-lg object-cover" loading="lazy" decoding="async" fetchpriority="auto" /><h3 class="text-xl font-bold text-gray-900 mb-2">SSL Secured</h3><p class="text-gray-600">Bank-level encryption protects your personal information</p></div></div><div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-red-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"><div class="text-center"><img data-ai="generate" data-slot="trust-verified" data-prompt="Verified checkmark badge with stars, official verification symbol in red white and blue colors" data-ar="1:1" src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/f6edf9f7-65a1-48b9-8e68-bd28c9412fd5/f6edf9f7-65a1-48b9-8e68-bd28c9412fd5/trust/trust-verified-6d52170be085484ba8126d21a2ce4498.png" alt="Verified Badge" width="80" height="80" class="w-20 h-20 mx-auto mb-4 rounded-lg object-cover" loading="lazy" decoding="async" fetchpriority="auto" /><h3 class="text-xl font-bold text-gray-900 mb-2">100% Verified</h3><p class="text-gray-600">All rewards verified through official U.S. partner programs</p></div></div><div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-yellow-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"><div class="text-center"><img data-ai="generate" data-slot="trust-partners" data-prompt="Official partner badges showing major U.S. retailers and brands, gold and blue professional design" data-ar="1:1" src="assets/images/partners.png" alt="Official Partners" alt="Partner Badges" width="80" height="80" class="w-20 h-20 mx-auto mb-4 rounded-lg object-cover" loading="lazy" decoding="async" fetchpriority="auto" /><h3 class="text-xl font-bold text-gray-900 mb-2">Official Partners</h3><p class="text-gray-600">Direct partnerships with major U.S. retailers and brands</p></div></div></div><div class="mt-12 text-center"><div class="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-6 py-3 rounded-full font-semibold"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>No Hidden Fees • Instant Delivery • 24/7 Support</span></div></div></div></section>
-    
-    <section class="py-20 bg-gradient-to-br from-blue-600 via-purple-700 to-red-600 relative overflow-hidden"><div class="absolute inset-0 bg-black/20"></div><div class="absolute inset-0"><div class="absolute top-10 left-10 w-32 h-32 bg-yellow-400/20 rounded-full blur-xl animate-pulse"></div><div class="absolute bottom-10 right-10 w-40 h-40 bg-blue-400/20 rounded-full blur-xl animate-pulse delay-1000"></div><div class="absolute top-1/2 left-1/3 w-24 h-24 bg-red-400/20 rounded-full blur-xl animate-pulse delay-500"></div></div><div class="container mx-auto px-4 relative z-10"><div class="max-w-4xl mx-auto text-center"><div class="mb-8"><img data-ai="generate" data-slot="cta-rewards" data-prompt="Floating gift cards and cash rewards with sparkles and confetti, premium golden glow effect, celebration theme" data-ar="16:9" src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/f6edf9f7-65a1-48b9-8e68-bd28c9412fd5/f6edf9f7-65a1-48b9-8e68-bd28c9412fd5/cta/cta-rewards-edd6689d1a664d5cbeb27f3aa85ab79d.png" alt="Reward Celebration" width="800" height="450" class="w-full max-w-2xl mx-auto rounded-2xl object-cover shadow-2xl" loading="lazy" decoding="async" fetchpriority="auto" /></div><h2 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Don't Miss Out on Your <span class="text-yellow-400">Exclusive Rewards!</span></h2><p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">Join thousands of Americans who have already claimed their verified gift card rewards. Limited time offers available now!</p><div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto"><div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"><div class="text-3xl font-bold text-yellow-400 mb-2">$750+</div><div class="text-white font-semibold">Average Reward Value</div></div><div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"><div class="text-3xl font-bold text-green-400 mb-2">100%</div><div class="text-white font-semibold">Verified & Secure</div></div><div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"><div class="text-3xl font-bold text-blue-400 mb-2">24/7</div><div class="text-white font-semibold">Customer Support</div></div></div><div class="space-y-4"><a href="https://www.af9m8trk.com/S8711B15/HMG123XJ/?s1=mona" class="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300 hover:scale-105 hover:-translate-y-1">🎁 Start Claim → Get My Rewards Now!</a><p class="text-blue-200 text-sm mt-4">⚡ Instant confirmation • No hidden fees • 100% legitimate U.S. programs</p></div><div class="mt-8 flex justify-center items-center space-x-6 text-white/80"><div class="flex items-center space-x-2"><svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>SSL Secure</span></div><div class="flex items-center space-x-2"><svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>U.S. Verified</span></div><div class="flex items-center space-x-2"><svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>No Fees</span></div></div></div></div></section>
-  </main>
 
-  <footer class="bg-black/30 backdrop-blur-md border-t border-white/20 py-12">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="col-span-1">
-          <div class="flex items-center space-x-2 mb-4">
-            <img src="assets/images/logo.png" class="w-6 h-6 rounded-md" alt="Brand Logo">
-            <span class="text-xl font-bold text-white">Rewards.nexvoli.com</span>
-         </div>
+        <div class="offer-highlight">
+            <div class="offer-stat">
+                <span>Min. Deposit</span>
+                <strong>€15</strong>
+            </div>
+            <div class="offer-stat">
+                <span>Win Up To</span>
+                <strong>€200+</strong>
+            </div>
+        </div>
 
-          <p class="text-white/60 text-sm">Verified U.S. gift card rewards from trusted partners.</p>
+        <div class="redirect-wrapper">
+            <div class="status-text" id="status-text">Entering game lobby automatically...</div>
+            
+            <div id="timer-wrap">00:0<span id="timer">5</span></div>
+            
+            <div class="progress-wrap" id="progress-wrap">
+                <div class="progress-bar"></div>
+            </div>
+            
+            <a href="YOUR_OFFER_LINK_HERE" class="btn" id="manualBtn">Play & Earn Now</a>
         </div>
-        <div>
-          <h4 class="font-semibold text-white mb-4">Rewards</h4>
-          <ul class="space-y-2 text-white/60 text-sm">
-            <li><a href="https://singingfiles.com/show.php?l=0&u=2463485&id=73210&tracking_id=akash" class="hover:text-white transition-colors">Amazon Rewards</a></li>
-            <li><a href="https://singingfiles.com/show.php?l=0&u=2463485&id=73210&tracking_id=akash" class="hover:text-white transition-colors">Walmart Rewards</a></li>
-            <li><a href="https://singingfiles.com/show.php?l=0&u=2463485&id=73210&tracking_id=akash" class="hover:text-white transition-colors">Cash Bonuses</a></li>
-            <li><a href="https://singingfiles.com/show.php?l=0&u=2463485&id=73210&tracking_id=akash" class="hover:text-white transition-colors">Shopping Rewards</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold text-white mb-4">Company</h4>
-          <ul class="space-y-2 text-white/60 text-sm">
-            <li><a href="https://singingfiles.com/show.php?l=0&u=2463485&id=73210&tracking_id=akash" class="hover:text-white transition-colors">About Us</a></li>
-            <li><a href="https://singingfiles.com/show.php?l=0&u=2463485&id=73210&tracking_id=akash" class="hover:text-white transition-colors">How It Works</a></li>
-            <li><a href="https://singingfiles.com/show.php?l=0&u=2463485&id=73210&tracking_id=akash" class="hover:text-white transition-colors">Trust & Security</a></li>
-            <li><a href="https://singingfiles.com/show.php?l=0&u=2463485&id=73210&tracking_id=akash" class="hover:text-white transition-colors">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold text-white mb-4">Legal</h4>
-          <ul class="space-y-2 text-white/60 text-sm">
-            <li><a href="https://singingfiles.com/show.php?l=0&u=2463485&id=73210&tracking_id=akash" class="hover:text-white transition-colors">Terms of Service</a></li>
-            <li><a href="https://singingfiles.com/show.php?l=0&u=2463485&id=73210&tracking_id=akash" class="hover:text-white transition-colors">Privacy Policy</a></li>
-            <li><a href="https://singingfiles.com/show.php?l=0&u=2463485&id=73210&tracking_id=akash" class="hover:text-white transition-colors">Support</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-white/60 text-sm mb-4 md:mb-0">© Rewards.nexvoli.com. All rights reserved. U.S. customers only.</p>
-        <a href="https://www.af9m8trk.com/S8711B15/MJP12296/?s1=akash" class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-2 rounded-full font-semibold hover:from-yellow-300 hover:to-yellow-500 transition-all glow-gold">
-          Start Claim →
-        </a>
-      </div>
+
     </div>
-  </footer>
+
+    <div class="toast" id="toast">
+        <div class="toast-icon">✓</div>
+        <div class="toast-text" id="toastMsg">
+            <span>User from Toronto</span> just withdrew €150
+        </div>
+    </div>
+
+    <script>
+        // --- 1. SET YOUR CPA LINK HERE ---
+        const OFFER_LINK = "https://go.gooddep.com/cashbox.ca/exn2fhxkq5"; 
+        document.getElementById("manualBtn").href = OFFER_LINK;
+
+        // --- 2. SMART AUTO-REDIRECT (FIRST TIME ONLY) ---
+        const hasVisited = localStorage.getItem("visited_cashbox_ca");
+        const statusText = document.getElementById("status-text");
+        const timerWrap = document.getElementById("timer-wrap");
+        const progressWrap = document.getElementById("progress-wrap");
+        const timerElement = document.getElementById("timer");
+
+        if (!hasVisited) {
+            // First visit: Show timer & auto-redirect
+            localStorage.setItem("visited_cashbox_ca", "true");
+            let timeLeft = 5;
+            
+            const countdown = setInterval(() => {
+                timeLeft--;
+                timerElement.textContent = timeLeft;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    window.location.href = OFFER_LINK;
+                }
+            }, 1000);
+        } else {
+            // Return visit: Hide timer, show welcome back text
+            statusText.innerText = "Welcome back! Ready to win?";
+            timerWrap.style.display = "none";
+            progressWrap.style.display = "none";
+        }
+
+        // --- 3. FAKE LIVE VIEWERS ---
+        let viewers = 284;
+        setInterval(() => {
+            viewers += Math.floor(Math.random() * 7) - 3; 
+            if(viewers < 250) viewers = 250; 
+            document.getElementById("viewerCount").innerText = viewers;
+        }, 3500);
+
+        // --- 4. GAMING THEMED ROTATING TOASTS (CA CITIES) ---
+        const cities = ["Toronto", "Vancouver", "Montreal", "Calgary", "Ottawa"];
+        const actions = ["just deposited €20", "just withdrew €150", "won a €50 bonus", "joined the game"];
+        const toast = document.getElementById("toast");
+        const toastMsg = document.getElementById("toastMsg");
+        
+        function showToast() {
+            const randomCity = cities[Math.floor(Math.random() * cities.length)];
+            const randomAction = actions[Math.floor(Math.random() * actions.length)];
+            
+            toastMsg.innerHTML = `<span>Player from ${randomCity}</span> ${randomAction}`;
+            toast.classList.add("show");
+            
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 3500); 
+        }
+
+        setTimeout(() => {
+            showToast();
+            setInterval(showToast, 5000); // Shows a new toast every 5 seconds
+        }, 1500);
+    </script>
+
 </body>
 </html>
